@@ -46,8 +46,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/FisioWebRatio" username="postgres" cryptedPassword="true" password="NjUwNzg0Mzk3" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/FisioWebRatio" username="postgres" cryptedPassword="true" password="NjUwNzg0Mzk3" schema="public"/>
   <Entity gr:x="95" gr:y="320" id="ent2" name="Paciente" duration="persistent" attributeOrder="ent2#att3 ent2#att4 ent2#att5 ent2#att6 ent2#att7 ent2#att8 ent2#att9 ent2#att10" db:database="db1" db:table="paciente">
     <Attribute id="ent2#att3" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att4" name="firstName" type="string" db:column="firstname"/>
