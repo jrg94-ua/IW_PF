@@ -40,7 +40,12 @@ Sistema web para la gestión integral de una clínica de fisioterapia que optimi
 - [x] Script SQL generado y validado
 
 ### 🔹 SITE VIEWS (3 obligatorios)
-- [ ] **Site View Público** - info clínica, servicios, ubicación, horarios
+- [x] **Site View Público** - info clínica, servicios, ubicación, horarios
+  - [x] Página bienvenida con información de la clínica
+  - [x] Sección "Quiénes Somos" con equipo e instalaciones
+  - [x] Lista de servicios activos (nombre, descripción, precio)
+  - [x] Datos de contacto y ubicación
+  - [ ] Funcionalidad de registro de usuarios (pendiente)
 - [ ] **Área Cliente** - ver/gestionar citas, facturas, datos personales
 - [ ] **Área Fisioterapeuta** - agenda, pacientes asignados, tratamientos
 - [ ] **Área Administrador** - gestión completa (CRUD todas las entidades)
