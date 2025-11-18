@@ -27,16 +27,17 @@ Sistema web para la gestión integral de una clínica de fisioterapia que optimi
 
 **Fecha límite: 4 de diciembre de 2025**
 
-### 🔹 MODELO DE DATOS (Clínica de Fisioterapia)
-- [ ] **Cliente** (Patient) - datos personales, contacto, historial
-- [ ] **Fisioterapeuta** (Physiotherapist) - especialidad, horarios
-- [ ] **Cita** (Appointment) - fecha, hora, estado, notas
-- [ ] **Tratamiento** (Treatment) - tipo, descripción, duración, precio
-- [ ] **Factura** (Invoice) - fecha, importe, estado pago
-- [ ] **Servicio** (Service) - catálogo de servicios ofrecidos
-- [ ] Adaptar User, Group, Module al contexto de la clínica
-- [ ] Definir todas las relaciones entre entidades
-- [ ] Verificar mapeo con base de datos PostgreSQL
+### 🔹 MODELO DE DATOS (Clínica de Fisioterapia) ✅
+- [x] **Paciente** - firstName, lastName, phone, email, address, birthDate, medicalHistory
+- [x] **Fisioterapeuta** - firstName, lastName, specialty, phone, email, licenseNumber
+- [x] **Cita** - appointmentDate, appointmentTime, status, notes, duration
+- [x] **Tratamiento** - name, description, duration, price
+- [x] **Factura** - invoiceNumber, invoiceDate, totalAmount, paymentStatus, paymentDate
+- [x] **Servicio** - name, description, category, price, active
+- [x] User, Group, Module configurados correctamente
+- [x] 10 relaciones definidas entre entidades
+- [x] Mapeo completo a base de datos PostgreSQL
+- [x] Script SQL generado y validado
 
 ### 🔹 SITE VIEWS (3 obligatorios)
 - [ ] **Site View Público** - info clínica, servicios, ubicación, horarios
@@ -75,26 +76,49 @@ Sistema web para la gestión integral de una clínica de fisioterapia que optimi
 
 ## 📊 Estado Actual del Proyecto
 
-### Modelo de Datos Existente:
-- ✅ User (username, password, email) → Adaptaremos para el sistema
-- ✅ Group (groupname) → Roles: Cliente, Fisioterapeuta, Admin
-- ✅ Module (modulename) → Áreas del sistema
-- ⚠️ Nuevo (entidad de prueba - **ELIMINAR**)
+### ✅ Modelo de Datos (COMPLETADO)
 
-### Entidades a Crear:
-- ⏳ Cliente/Paciente (Patient)
-- ⏳ Fisioterapeuta (Physiotherapist)
-- ⏳ Cita (Appointment)
-- ⏳ Tratamiento (Treatment)
-- ⏳ Factura (Invoice)
-- ⏳ Servicio (Service)
+**Entidades creadas (9):**
+- ✅ User, Group, Module (sistema base)
+- ✅ Paciente (8 atributos)
+- ✅ Fisioterapeuta (7 atributos)
+- ✅ Cita (6 atributos)
+- ✅ Tratamiento (5 atributos)
+- ✅ Factura (6 atributos)
+- ✅ Servicio (6 atributos)
 
-### Site Views:
-- ⏳ Público (información general)
+**Relaciones implementadas (10):**
+- User ↔ Group (N:M)
+- User → DefaultGroup (N:1)
+- Group → DefaultModule (N:1)
+- Group ↔ Module (N:M)
+- User → Paciente (1:1)
+- User → Fisioterapeuta (1:1)
+- Paciente → Cita (1:N)
+- Fisioterapeuta → Cita (1:N)
+- Cita ↔ Tratamiento (N:M)
+- Paciente → Factura (1:N)
+
+**Base de Datos:**
+- ✅ PostgreSQL configurada (localhost:5432/FisioWebRatio)
+- ✅ Script SQL generado: `Database1_251118_174423.sql`
+- ✅ Todas las tablas mapeadas correctamente
+
+### ⏳ Pendiente
+
+**Site Views:**
+- ⏳ Site View Público
 - ⏳ Área Cliente
 - ⏳ Área Fisioterapeuta
 - ⏳ Área Administrador
 
-### Base de Datos:
-- ✅ PostgreSQL configurada en localhost:5432
-- ✅ Scripts de creación generados (pendiente actualizar)
+**Componentes:**
+- ⏳ Containers, View Components, Operations
+- ⏳ Session Components (login/logout)
+- ⏳ Utility Components
+
+**Entrega:**
+- ⏳ Presentación PDF
+- ⏳ Video DEMO (10min)
+- ⏳ Backup base de datos
+- ⏳ ZIP final
