@@ -1,0 +1,63 @@
+[18 nov 2025 16:53:09] Building database metadata model
+[18 nov 2025 16:53:09] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@1c458c1e, includeTables=true, username=postgres, outputLogPath=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\prueba\.Temp~\DB.xml.log, readIndexes=null, driverClass=org.postgresql.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.PostgreSQLMetaDataProvider, outputPath=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\prueba\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby, url=jdbc:postgresql://localhost:5432/PracticaFinal, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=54392}
+[18 nov 2025 16:53:09] URL: jdbc:postgresql://localhost:5432/PracticaFinal
+[18 nov 2025 16:53:09] Product name: PostgreSQL
+[18 nov 2025 16:53:09] Product version: 9.6.15
+[18 nov 2025 16:53:09] Driver name: PostgreSQL Native Driver
+[18 nov 2025 16:53:09] Driver version: PostgreSQL 9.3 JDBC3g (build 1103)
+[18 nov 2025 16:53:09] Driver major version: 9
+[18 nov 2025 16:53:09] Driver minor version: 3
+[18 nov 2025 16:53:09] Identifier quote string: 3
+[18 nov 2025 16:53:09] Retrieving schemas
+[18 nov 2025 16:53:09]   Found schema: information_schema
+[18 nov 2025 16:53:09]   Found schema: pg_catalog
+[18 nov 2025 16:53:09]   Found schema: public
+[18 nov 2025 16:53:09] Retrieving sequences
+[18 nov 2025 16:53:09] Retrieving [TABLE, VIEW, SYNONYM] for schema 'information_schema'
+[18 nov 2025 16:53:09] Retrieving [TABLE, VIEW, SYNONYM] for schema 'pg_catalog'
+[18 nov 2025 16:53:09] Retrieving [TABLE, VIEW, SYNONYM] for schema 'public'
+[18 nov 2025 16:53:09]   Found 'public.group' [type = TABLE]
+[18 nov 2025 16:53:09]   Found 'public.group_module' [type = TABLE]
+[18 nov 2025 16:53:09]   Found 'public.module' [type = TABLE]
+[18 nov 2025 16:53:09]   Found 'public.nuevo' [type = TABLE]
+[18 nov 2025 16:53:09]   Found 'public.user' [type = TABLE]
+[18 nov 2025 16:53:09]   Found 'public.user_group' [type = TABLE]
+[18 nov 2025 16:53:09] Retrieving columns for 'public.group' [type = TABLE]
+[18 nov 2025 16:53:09]   Found column: oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: groupname [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: module_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09] Retrieving primary keys for 'public.group' [type = TABLE]
+[18 nov 2025 16:53:09]   Found primary key column: oid
+[18 nov 2025 16:53:09] Retrieving columns for 'public.group_module' [type = TABLE]
+[18 nov 2025 16:53:09]   Found column: group_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: module_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09] Retrieving primary keys for 'public.group_module' [type = TABLE]
+[18 nov 2025 16:53:09]   Found primary key column: group_oid
+[18 nov 2025 16:53:09]   Found primary key column: module_oid
+[18 nov 2025 16:53:09] Retrieving columns for 'public.module' [type = TABLE]
+[18 nov 2025 16:53:09]   Found column: oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: moduleid [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: modulename [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 nov 2025 16:53:09] Retrieving primary keys for 'public.module' [type = TABLE]
+[18 nov 2025 16:53:09]   Found primary key column: oid
+[18 nov 2025 16:53:09] Retrieving columns for 'public.nuevo' [type = TABLE]
+[18 nov 2025 16:53:09]   Found column: oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: atriburo [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 nov 2025 16:53:09] Retrieving primary keys for 'public.nuevo' [type = TABLE]
+[18 nov 2025 16:53:09]   Found primary key column: oid
+[18 nov 2025 16:53:09] Retrieving columns for 'public.user' [type = TABLE]
+[18 nov 2025 16:53:09]   Found column: oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: username [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: password [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: email [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: group_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09] Retrieving primary keys for 'public.user' [type = TABLE]
+[18 nov 2025 16:53:09]   Found primary key column: oid
+[18 nov 2025 16:53:09] Retrieving columns for 'public.user_group' [type = TABLE]
+[18 nov 2025 16:53:09]   Found column: user_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09]   Found column: group_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 nov 2025 16:53:09] Retrieving primary keys for 'public.user_group' [type = TABLE]
+[18 nov 2025 16:53:09]   Found primary key column: user_oid
+[18 nov 2025 16:53:09]   Found primary key column: group_oid
+[18 nov 2025 16:53:09] Database metadata retrieved (44 ms)
+[18 nov 2025 16:53:09] Database connection closed
