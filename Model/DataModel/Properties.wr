@@ -46,10 +46,104 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="75" gr:y="320" id="ent1" name="Nuevo" duration="persistent" attributeOrder="ent1#att1 ent1#att2" db:database="db1" db:table="nuevo">
-    <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent1#att2" name="atriburo" type="string" db:column="atriburo"/>
-  </Entity>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/PracticaFinal" username="postgres" cryptedPassword="true" password="NjUwNzg0Mzk3" schema="public">
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/FisioWebRatio" username="postgres" cryptedPassword="true" password="NjUwNzg0Mzk3" schema="public">
   </db:Database>
+  <Entity gr:x="95" gr:y="320" id="ent2" name="Paciente" duration="persistent" attributeOrder="ent2#att3 ent2#att4 ent2#att5 ent2#att6 ent2#att7 ent2#att8 ent2#att9 ent2#att10" db:database="db1" db:table="paciente">
+    <Attribute id="ent2#att3" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent2#att4" name="firstName" type="string" db:column="firstname"/>
+    <Attribute id="ent2#att5" name="lastName" type="string" db:column="lastname"/>
+    <Attribute id="ent2#att6" name="phone" type="string" db:column="phone"/>
+    <Attribute id="ent2#att7" name="email" type="string" db:column="email"/>
+    <Attribute id="ent2#att8" name="address" type="string" db:column="address"/>
+    <Attribute id="ent2#att9" name="birthDate" type="date" db:column="birthdate"/>
+    <Attribute id="ent2#att10" name="medicalHistory" type="text" db:column="medicalhistory"/>
+  </Entity>
+  <Entity gr:x="555" gr:y="285" id="ent3" name="Fisioterapeuta" duration="persistent" attributeOrder="ent3#att11 ent3#att12 ent3#att13 ent3#att14 ent3#att15 ent3#att16 ent3#att17" db:database="db1" db:table="fisioterapeuta">
+    <Attribute id="ent3#att11" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent3#att12" name="firstName" type="string" db:column="firstname"/>
+    <Attribute id="ent3#att13" name="lastName" type="string" db:column="lastname"/>
+    <Attribute id="ent3#att14" name="specialty" type="string" db:column="specialty"/>
+    <Attribute id="ent3#att15" name="phone" type="string" db:column="phone"/>
+    <Attribute id="ent3#att16" name="email" type="string" db:column="email"/>
+    <Attribute id="ent3#att17" name="licenseNumber" type="string" db:column="licensenumber"/>
+  </Entity>
+  <Entity gr:x="315" gr:y="450" id="ent4" name="Cita" duration="persistent" attributeOrder="ent4#att18 ent4#att19 ent4#att20 ent4#att21 ent4#att22 ent4#att23" db:database="db1" db:table="cita">
+    <Attribute id="ent4#att18" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent4#att19" name="appointmentDate" type="date" db:column="appointmentdate"/>
+    <Attribute id="ent4#att20" name="appointmentTime" type="time" db:column="appointmenttime"/>
+    <Attribute id="ent4#att21" name="status" type="string" db:column="status"/>
+    <Attribute id="ent4#att22" name="notes" type="text" db:column="notes"/>
+    <Attribute id="ent4#att23" name="duration" type="integer" db:column="duration"/>
+  </Entity>
+  <Entity gr:x="755" gr:y="525" id="ent5" name="Tratamiento" duration="persistent" attributeOrder="ent5#att24 ent5#att25 ent5#att26 ent5#att27 ent5#att28" db:database="db1" db:table="tratamiento">
+    <Attribute id="ent5#att24" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent5#att25" name="name" type="string" db:column="name"/>
+    <Attribute id="ent5#att26" name="description" type="text" db:column="description"/>
+    <Attribute id="ent5#att27" name="duration" type="integer" db:column="duration"/>
+    <Attribute id="ent5#att28" name="price" type="float" db:column="price"/>
+  </Entity>
+  <Entity gr:x="95" gr:y="550" id="ent6" name="Factura" duration="persistent" attributeOrder="ent6#att29 ent6#att30 ent6#att31 ent6#att32 ent6#att33 ent6#att34" db:database="db1" db:table="factura">
+    <Attribute id="ent6#att29" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent6#att30" name="invoiceNumber" type="string" db:column="invoicenumber"/>
+    <Attribute id="ent6#att31" name="invoiceDate" type="date" db:column="invoicedate"/>
+    <Attribute id="ent6#att32" name="totalAmount" type="float" db:column="totalamount"/>
+    <Attribute id="ent6#att33" name="paymentStatus" type="string" db:column="paymentstatus"/>
+    <Attribute id="ent6#att34" name="paymentDate" type="date" db:column="paymentdate"/>
+  </Entity>
+  <Entity gr:x="425" gr:y="655" id="ent7" name="Servicio" duration="persistent" attributeOrder="ent7#att35 ent7#att36 ent7#att37 ent7#att38 ent7#att39 ent7#att40" db:database="db1" db:table="servicio">
+    <Attribute id="ent7#att35" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent7#att36" name="name" type="string" db:column="name"/>
+    <Attribute id="ent7#att37" name="description" type="text" db:column="description"/>
+    <Attribute id="ent7#att38" name="category" type="string" db:column="category"/>
+    <Attribute id="ent7#att39" name="price" type="float" db:column="price"/>
+    <Attribute id="ent7#att40" name="active" type="boolean" db:column="active"/>
+  </Entity>
+  <Relationship id="rel1" name="User_Paciente" sourceEntity="User" targetEntity="ent2" db:database="db1" db:table="paciente">
+    <RelationshipRole1 id="rel1#role1" name="paciente" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1#role2" name="user" maxCard="1">
+      <db:JoinColumn attribute="ent2#att3" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel2" name="User_Fisioterapeuta" sourceEntity="User" targetEntity="ent3" db:database="db1" db:table="fisioterapeuta">
+    <RelationshipRole1 id="rel2#role3" name="fisioterapeuta" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="user" maxCard="1">
+      <db:JoinColumn attribute="ent3#att11" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel3" name="Paciente_Cita" sourceEntity="ent2" targetEntity="ent4" db:database="db1" db:table="cita">
+    <RelationshipRole1 id="rel3#role5" name="citas" maxCard="N">
+      <db:JoinColumn attribute="ent2#att3" name="paciente_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="paciente" maxCard="1">
+      <db:JoinColumn attribute="ent4#att18" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel4" name="Fisioterapeuta_Cita" sourceEntity="ent3" targetEntity="ent4" db:database="db1" db:table="cita">
+    <RelationshipRole1 id="rel4#role7" name="citas" maxCard="N">
+      <db:JoinColumn attribute="ent3#att11" name="fisioterapeuta_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="fisioterapeuta" maxCard="1">
+      <db:JoinColumn attribute="ent4#att18" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel5" name="Cita_Tratamiento" sourceEntity="ent4" targetEntity="ent5" db:database="db1" db:table="cita_tratamiento">
+    <RelationshipRole1 id="rel5#role9" name="tratamientos" maxCard="N">
+      <db:JoinColumn attribute="ent4#att18" name="cita_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="citas" maxCard="N">
+      <db:JoinColumn attribute="ent5#att24" name="tratamiento_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel6" name="Paciente_Factura" sourceEntity="ent2" targetEntity="ent6" db:database="db1" db:table="factura">
+    <RelationshipRole1 id="rel6#role11" name="facturas" maxCard="N">
+      <db:JoinColumn attribute="ent2#att3" name="paciente_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="paciente" maxCard="1">
+      <db:JoinColumn attribute="ent6#att29" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>
