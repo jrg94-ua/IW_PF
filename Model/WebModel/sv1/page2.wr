@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page2" name="home" gr:x="175" gr:y="80" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page2" name="home" gr:x="220" gr:y="95" landmark="true">
   <ContentUnits>
     <IndexUnit gr:x="135" gr:y="5" id="sv1#page2#inu1" name="Lista servicios" entity="ent7" displayAttributes="ent7#att36 ent7#att37 ent7#att39">
       <Selector id="sv1#page2#inu1#su1" defaultPolicy="fill" booleanOperator="and">
@@ -16,13 +16,25 @@ Instalaciones: Disponemos de instalaciones modernas equipadas con la &#250;ltima
 
 Ubicaci&#243;n: Calle de la Salud 123, Alicante | Tel&#233;fono: 965 123 456 | Email: info@fisioclinica.com</Message>
     </MultiMessageUnit>
-    <EntryUnit gr:x="10" gr:y="85" id="sv1#page2#enu3" name="Registrate" fieldOrder="sv1#page2#enu3#fld4 sv1#page2#enu3#fld2 sv1#page2#enu3#fld5 sv1#page2#enu3#fld6 sv1#page2#enu3#fld3" linkOrder="sv1#page2#enu3#ln3">
-      <Field id="sv1#page2#enu3#fld2" name="Nombre" type="string" modifiable="true"/>
-      <Field id="sv1#page2#enu3#fld3" name="Contrase&#241;a" type="string" modifiable="true"/>
+    <EntryUnit gr:x="5" gr:y="95" id="sv1#page2#enu3" name="Registrate" fieldOrder="sv1#page2#enu3#fld4 sv1#page2#enu3#fld7 sv1#page2#enu3#fld8 sv1#page2#enu3#fld1 sv1#page2#enu3#fld6 sv1#page2#enu3#fld5 sv1#page2#enu3#fld3 sv1#page2#enu3#fld9" linkOrder="sv1#page2#enu3#ln2">
+      <Field id="sv1#page2#enu3#fld3" name="Contrase&#241;a" type="password" modifiable="true"/>
       <Field id="sv1#page2#enu3#fld4" name="Email" type="string" modifiable="true"/>
       <Field id="sv1#page2#enu3#fld5" name="Direccion" type="string" modifiable="true"/>
       <Field id="sv1#page2#enu3#fld6" name="Fecha Nacimiento" type="date" modifiable="true"/>
-      <Link id="sv1#page2#enu3#ln3" name="Registrar" to="sv1#miu2" automaticCoupling="true" type="normal" validate="true"/>
+      <Field id="sv1#page2#enu3#fld1" name="Telefono" type="string" modifiable="true"/>
+      <Field id="sv1#page2#enu3#fld7" name="Nombre" type="string" modifiable="true"/>
+      <Field id="sv1#page2#enu3#fld8" name="Apellido1" type="string" modifiable="true"/>
+      <Link id="sv1#page2#enu3#ln2" name="Flow2" to="sv1#miu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page2#enu3#ln2#par20" name="Apellidos_apellidos" source="sv1#page2#enu3#fld8" target="sv1#miu1.mov1#opm1#icu1#icp8"/>
+        <LinkParameter id="sv1#page2#enu3#ln2#par21" name="Contrase&#241;a_contrasena" source="sv1#page2#enu3#fld3" target="sv1#miu1.mov1#opm1#icu1#icp4"/>
+        <LinkParameter id="sv1#page2#enu3#ln2#par22" name="Direccion_direccion" source="sv1#page2#enu3#fld5" target="sv1#miu1.mov1#opm1#icu1#icp3"/>
+        <LinkParameter id="sv1#page2#enu3#ln2#par23" name="Email_email" source="sv1#page2#enu3#fld4" target="sv1#miu1.mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="sv1#page2#enu3#ln2#par24" name="Fecha Nacimiento_fecha" source="sv1#page2#enu3#fld6" target="sv1#miu1.mov1#opm1#icu1#icp5"/>
+        <LinkParameter id="sv1#page2#enu3#ln2#par25" name="Nombre_nombre" source="sv1#page2#enu3#fld7" target="sv1#miu1.mov1#opm1#icu1#icp7"/>
+        <LinkParameter id="sv1#page2#enu3#ln2#par26" name="Telefono_telefono" source="sv1#page2#enu3#fld1" target="sv1#miu1.mov1#opm1#icu1#icp6"/>
+        <LinkParameter id="sv1#page2#enu3#ln2#par29" name="Username_username" source="sv1#page2#enu3#fld9" target="sv1#miu1.mov1#opm1#icu1#icp9"/>
+      </Link>
+      <Field id="sv1#page2#enu3#fld9" name="Username" type="string" modifiable="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -51,12 +63,15 @@ Ubicaci&#243;n: Calle de la Salud 123, Alicante | Tel&#233;fono: 965 123 456 | E
       <layout:Cell/>
       <layout:Cell colspan="6">
         <layout:Unit unitId="sv1#page2#enu3">
+          <layout:Link link="sv1#page2#enu3#ln2"/>
           <layout:Field field="sv1#page2#enu3#fld4"/>
-          <layout:Field field="sv1#page2#enu3#fld2"/>
-          <layout:Field field="sv1#page2#enu3#fld5"/>
+          <layout:Field field="sv1#page2#enu3#fld7"/>
+          <layout:Field field="sv1#page2#enu3#fld8"/>
+          <layout:Field field="sv1#page2#enu3#fld1"/>
           <layout:Field field="sv1#page2#enu3#fld6"/>
+          <layout:Field field="sv1#page2#enu3#fld5"/>
           <layout:Field field="sv1#page2#enu3#fld3"/>
-          <layout:Link link="sv1#page2#enu3#ln3"/>
+          <layout:Field field="sv1#page2#enu3#fld9"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

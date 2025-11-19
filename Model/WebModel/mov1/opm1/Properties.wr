@@ -1,0 +1,43 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="170" gr:y="65" id="mov1#opm1" name="Crear Users">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu1" gr:x="45" gr:y="170">
+      <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="email"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp3" name="direccion"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp4" name="contrasena"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp5" name="fecha"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp6" name="telefono"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp7" name="nombre"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp8" name="apellidos1"/>
+      <OKLink id="mov1#opm1#icu1#oln2" name="OKFlow2" to="mov1#opm1#cru3">
+        <LinkParameter id="mov1#opm1#icu1#oln2#par10" name="direccion_address" source="mov1#opm1#icu1#icp3" target="mov1#opm1#cru3.ent2#att8"/>
+        <LinkParameter id="mov1#opm1#icu1#oln2#par11" name="fecha_birthDate" source="mov1#opm1#icu1#icp5" target="mov1#opm1#cru3.ent2#att9"/>
+        <LinkParameter id="mov1#opm1#icu1#oln2#par12" name="email_email" source="mov1#opm1#icu1#icp2" target="mov1#opm1#cru3.ent2#att7"/>
+        <LinkParameter id="mov1#opm1#icu1#oln2#par13" name="apellidos_firstName" source="mov1#opm1#icu1#icp7" target="mov1#opm1#cru3.ent2#att4"/>
+        <LinkParameter id="mov1#opm1#icu1#oln2#par14" name="apellidos_lastName" source="mov1#opm1#icu1#icp8" target="mov1#opm1#cru3.ent2#att5"/>
+        <LinkParameter id="mov1#opm1#icu1#oln2#par15" name="telefono_phone" source="mov1#opm1#icu1#icp6" target="mov1#opm1#cru3.ent2#att6"/>
+      </OKLink>
+      <Link id="mov1#opm1#icu1#ln3" name="Flow3" to="mov1#opm1#cru2" type="transport" validate="true">
+        <LinkParameter id="mov1#opm1#icu1#ln3#par27" name="contrasena_password" source="mov1#opm1#icu1#icp4" target="mov1#opm1#cru2.password"/>
+        <LinkParameter id="mov1#opm1#icu1#ln3#par28" name="username_userName" source="mov1#opm1#icu1#icp9" target="mov1#opm1#cru2.userName"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp9" name="username"/>
+    </InputCollectorUnit>
+    <!-- Crear User primero -->
+    <CreateUnit gr:x="595" gr:y="195" id="mov1#opm1#cru2" name="crearUser" entity="User">
+      <KOLink id="mov1#opm1#cru2#kln1" name="ErrorUsuario" to="mov1#opm1#kocu1"/>
+      <OKLink id="mov1#opm1#cru2#oln4" name="OKFlow4" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <!-- Crear Paciente vinculado al User -->
+    <OKCollectorUnit gr:x="755" gr:y="175" id="mov1#opm1#okcu1" name="OK Port1"/>
+    <KOCollectorUnit gr:x="755" gr:y="300" id="mov1#opm1#kocu1" name="KO Port1"/>
+    <CreateUnit gr:x="360" gr:y="305" id="mov1#opm1#cru3" name="Create3" entity="ent2">
+      <OKLink id="mov1#opm1#cru3#oln3" name="OKFlow3" to="mov1#opm1#cru2">
+        <LinkParameter id="mov1#opm1#cru3#oln3#par16" name="email_email" source="ent2#att7Array" target="mov1#opm1#cru2.email"/>
+        <LinkParameter id="mov1#opm1#cru3#oln3#par17" name="4_Group.oid(defaultGroup)" sourceValue="4" target="mov1#opm1#cru2.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm1#cru3#oln3#par18" name="oid_Paciente.oid(paciente)" source="ent2#att3Array" target="mov1#opm1#cru2.rel1#role1.ent2#att3"/>
+        <LinkParameter id="mov1#opm1#cru3#oln3#par19" name="firstName_userName" source="ent2#att4Array" target="mov1#opm1#cru2.userName"/>
+      </OKLink>
+      <KOLink id="mov1#opm1#cru3#kln2" name="KOFlow2" to="mov1#opm1#kocu1" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</OperationModule>
