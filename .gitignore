@@ -1,0 +1,18 @@
+# WebRatio temporary and build files
+.Temp~/
+
+# WebRatio metadata
+.metadata/
+
+# Build output
+bin/
+build/
+
+# IDE files
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
